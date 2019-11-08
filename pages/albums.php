@@ -1,4 +1,12 @@
-<h2 class="text-center text-warning"><i class="fas fa-heartbeat"></i><b>Álbuns</b></h2>
+<div class="col-md-12 my-4 mb-0">
+    <h2 class="text-center text-warning "><i class="fas fa-heartbeat"></i><b>Álbuns</b></h2><br/>
+</div>
+
+<div class="col-md-3 my-0 ml-0 mb-2">
+<a href="?page=new-album" class="btn btn-success"><b>New <i class="fas fa-heartbeat"></i>Album</b></a>
+</div>
+
+
 
 <div class="row">
     <?php
