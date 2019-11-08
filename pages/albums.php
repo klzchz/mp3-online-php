@@ -12,10 +12,12 @@
     <?php
 
     $albums = getAlbums();
-
+   
 
     foreach ($albums as $key => $value) {
 
+       $pathImage = glob($value."/*");
+    
        $arrays = explode('/',$value);
        $name = $arrays[1];
        $image = strtoupper($name).".".'jpg';
@@ -25,7 +27,7 @@
 
         <a href="?page=musics&album=<?=$name?>">
        
-        <img class="card-img-top img-album"   src="albums/<?=$name?>/<?=$image?>" alt="<?=$name?>">
+        <img class="card-img-top img-album"   src="<?=$pathImage[0]?>" alt="<?=$name?>">
        
         <h3 class="text-primary"><?=$name?></h3>
         </a>

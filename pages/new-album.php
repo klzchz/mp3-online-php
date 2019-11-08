@@ -24,3 +24,32 @@
 </form>
 
 
+<?php
+
+if($_SERVER['REQUEST_METHOD'] == 'POST')
+{
+   $request = $_POST;
+   $image = $_FILES['image'];
+  
+
+   $path = "albums/".$request['name'];
+
+   if(!is_dir($path))
+   {
+        mkdir($path);
+   }
+
+  
+   $extension = explode('.',$image['name']);
+   $extension = $extension[1];
+    
+   $nameImage = strtoupper($request['name']).".{$extension}";
+
+   if (move_uploaded_file($image['tmp_name'],$path."/".$nameImage)) {
+        header("Location: ?page=albums");
+   }else{
+       echo "Falha no upload";
+   }
+}
+
+?>
