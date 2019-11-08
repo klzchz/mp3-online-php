@@ -10,14 +10,24 @@
 
 <div class="row">
     <?php
-    for ($i=0; $i <10 ; $i++){  
- 
+
+    $albums = getAlbums();
+
+
+    foreach ($albums as $key => $value) {
+
+       $arrays = explode('/',$value);
+       $name = $arrays[1];
+       $image = strtoupper($name).".".'jpg';
+
     ?>
     <div class="col-md-3">
 
         <a href="">
-        <img class="card-img-top"  src="albums/74237740_2418421971527940_2729624893984342016_o.jpg" alt="">
-        <h3 class="text-primary">Album <?=$i+1?></h3>
+       
+        <img class="card-img-top img-album"   src="albums/<?=$name?>/<?=$image?>" alt="<?=$name?>">
+       
+        <h3 class="text-primary"><?=$name?></h3>
         </a>
     </div>
     <?php

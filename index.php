@@ -15,6 +15,8 @@
     <div class="container">
         <div class="row">
             <?php
+                include_once "helpers.php";
+
                 if(isset($_GET['page']))
                 {   
                     if(file_exists("pages/{$_GET['page']}.php"))
