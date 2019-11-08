@@ -6,3 +6,9 @@ function getAlbums()
 
   return $albums;
 }
+
+function getMusics($album)
+{
+    $musics = glob("albums/{$album}/musics/*");
+    return $musics; 
+}

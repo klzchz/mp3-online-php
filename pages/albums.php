@@ -23,7 +23,7 @@
     ?>
     <div class="col-md-3">
 
-        <a href="">
+        <a href="?page=musics&album=<?=$name?>">
        
         <img class="card-img-top img-album"   src="albums/<?=$name?>/<?=$image?>" alt="<?=$name?>">
        
