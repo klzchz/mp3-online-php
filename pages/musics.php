@@ -2,6 +2,8 @@
 <div class="col-md-12">
     <a href="?page=albums">Voltar para os <i class="fas fa-heartbeat"></i>Albums</a>
 </div>
+
+<a href="?page=new_musics&album=<?=$_GET['album']?>" class="btn btn-success">New Music</a>
 <hr>
 
 <?php
